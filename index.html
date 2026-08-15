@@ -1,181 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Global Explorer Travels</title>
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f2f2f2;
-}
-header{
-background:#4b7aa8;
-color:white;
-text-align:center;
-padding:20px;
-}
-nav{
-background:#2c9717;
-padding:10px;
-text-align:center;
-}
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
-section{
-background:white;
-width:50%;
-margin:20px auto;
-padding:20px;
-border-radius:8px;
-}
-img{
-border-radius:8px;
-}
-
-input,textarea{
-width:95%;
-padding:8px;
-margin:5px 0;
-}
-button{
-background:#0055aa;
-color:white;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-}
-footer{
-background:#003366;
-color:white;
-text-align:center;
-padding:15px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBSE Class 12 English Hub | Learn • Understand • Revise • Score</title>
+  <meta name="description" content="Comprehensive, modern CBSE Class 12 English learning platform. Master Flamingo Prose, Flamingo Poetry, and Vistas through section-wise explanations, line-by-line analyses, vocabulary flashcards, and exam-oriented question banks.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-<h1>Global Explorer Travels</h1>
-<p>Your Gateway To International Adventures</p>
-</header>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-badge">12</div>
+        <div class="brand-text">
+          <span class="brand-title">English Hub</span>
+          <span class="brand-sub">CBSE Class 12</span>
+        </div>
+      </a>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Packages</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
+      <!-- Desktop Nav -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">🏠 Home</a>
+        <a href="flamingo.html" class="nav-link">📚 Flamingo Prose</a>
+        <a href="poetry.html" class="nav-link">🎭 Flamingo Poetry</a>
+        <a href="vistas.html" class="nav-link">📖 Vistas</a>
+        <a href="vocabulary.html" class="nav-link">🔤 Vocabulary</a>
+        <a href="questions.html" class="nav-link">📝 Questions Bank</a>
+        <a href="quick-revision.html" class="nav-link">⚡ Quick Revision</a>
+      </nav>
 
-<section>
-<img src="banner.jpg" width="100%" height="250">
-<h2>About Us</h2>
-<p>Global Explorer Travels provides affordable international tour packages with luxury hotels, visa assistance and experienced tour guides for unforgettable vacations.</p>
-</section>
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="search-trigger-btn open-search-modal" title="Search Everything">
+          <span>🔍</span>
+          <span>Search Lessons...</span>
+          <span class="kbd-shortcut">Ctrl K</span>
+        </button>
 
-<section>
+        <a href="bookmarks.html" class="icon-btn" title="Saved Bookmarks">
+          <span>🔖</span>
+          <span class="badge-count bookmark-count-badge" style="display: none;">0</span>
+        </a>
 
-<h2>Popular Packages</h2>
+        <a href="progress.html" class="icon-btn" title="My Learning Progress">
+          <span>📊</span>
+        </a>
 
-<div class="card">
-<img src="japan.jpg" width="180" height="120">
-<h3>Japan</h3>
-<p>🌸 Cherry Blossom Tour</p>
-<p>🕒 7 Days</p>
-<p><b>₹1,20,000</b></p>
-<button>Book Now</button>
-</div>
+        <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
 
-<div class="card">
-<img src="france.jpg" width="180" height="120">
-<h3>France</h3>
-<p>🗼 Paris & Eiffel Tour</p>
-<p>🕒 8 Days</p>
-<p><b>₹1,75,000</b></p>
-<button>Book Now</button>
-</div>
+        <button class="icon-btn mobile-menu-btn" title="Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
 
-<div class="card">
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="pill-tag">🎓 2026-27 CBSE Core Syllabus</div>
+          <h1 class="hero-title">
+            CBSE Class 12 <br>
+            <span class="gradient-text">English Hub</span>
+          </h1>
+          <div class="hero-subtitle">Learn • Understand • Revise • Score</div>
+          <p class="hero-desc">
+            Your definitive companion for mastering CBSE Class 12 English. Dive into section-by-section line explanations, vocabulary builders, competency-based questions, and single-click lesson PDF exports.
+          </p>
+          <div class="hero-actions">
+            <a href="#browse-sections" class="btn btn-primary">Start Learning →</a>
+            <a href="quick-revision.html" class="btn btn-outline">⚡ Quick Revision Notes</a>
+            <button class="btn btn-outline" onclick="downloadAllLessonsBundle()">📦 Download All Notes PDF</button>
+          </div>
+        </div>
 
-<h3>Dubai</h3>
-<p>🏜 Desert Safari Tour</p>
-<p>🕒 5 Days</p>
-<p><b>₹85,000</b></p>
-<button>Book Now</button>
-</div>
+        <!-- Hero Stats Preview -->
+        <div class="hero-card-preview">
+          <div class="hero-stats-grid">
+            <div class="stat-box">
+              <span class="stat-number" id="stat-total-chapters">19</span>
+              <span class="stat-label">Prescribed Lessons</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" id="stat-total-vocab">180+</span>
+              <span class="stat-label">Vocabulary Flashcards</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">NCERT & CBSE Aligned</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">A4</span>
+              <span class="stat-label">Print-Ready PDFs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <!-- Continue Learning Section -->
+    <section class="container continue-learning-section" id="continue-learning-card" style="display: none;">
+      <!-- Dynamic render via app.js -->
+    </section>
 
-<style>
+    <!-- Navigation Hub Cards -->
+    <section class="container" id="browse-sections" style="padding-top: 2rem;">
+      <div class="section-header-block">
+        <div class="section-header-left">
+          <h2 class="section-title">Explore Learning Modules</h2>
+          <p class="section-subtitle">Structured for maximum conceptual clarity and high examination performance.</p>
+        </div>
+      </div>
 
-.card{
-display:inline-block;
-width:200px;
-background:white;
-margin:12px;
-padding:12px;
-text-align:center;
-border:1px solid #d2c2b0;
-border-radius:15px;
-vertical-align:top;
-}
+      <div class="hub-categories-grid">
+        <a href="flamingo.html" class="category-card">
+          <div>
+            <div class="category-icon-wrapper">📚</div>
+            <div class="category-content" style="margin-top: 1rem;">
+              <h3>Flamingo — Prose</h3>
+              <p>In-depth coverage of The Rattrap, Indigo, Poets and Pancakes, The Interview, Going Places, and more with section-wise line breakdowns.</p>
+            </div>
+          </div>
+          <div class="category-footer">
+            <span>8 Chapters</span>
+            <span>Explore Prose →</span>
+          </div>
+        </a>
 
-.card img{
-border-radius:10px;
-}
+        <a href="poetry.html" class="category-card">
+          <div>
+            <div class="category-icon-wrapper">🎭</div>
+            <div class="category-content" style="margin-top: 1rem;">
+              <h3>Flamingo — Poetry</h3>
+              <p>Stanza-wise explanations, poetic devices, rhyme schemes, and underlying themes for all prescribed poems.</p>
+            </div>
+          </div>
+          <div class="category-footer">
+            <span>5 Poems</span>
+            <span>Explore Poetry →</span>
+          </div>
+        </a>
 
-.card h3{
-margin:10px 0 5px;
-color:#7B5E57;
-}
+        <a href="vistas.html" class="category-card">
+          <div>
+            <div class="category-icon-wrapper">📖</div>
+            <div class="category-content" style="margin-top: 1rem;">
+              <h3>Vistas — Supplementary</h3>
+              <p>Comprehensive character sketches, analytical themes, and extract questions for all Vistas chapters.</p>
+            </div>
+          </div>
+          <div class="category-footer">
+            <span>6 Chapters</span>
+            <span>Explore Vistas →</span>
+          </div>
+        </a>
 
-.card p{
-margin:5px;
-}
+        <a href="vocabulary.html" class="category-card">
+          <div>
+            <div class="category-icon-wrapper">🔤</div>
+            <div class="category-content" style="margin-top: 1rem;">
+              <h3>Vocabulary Builder</h3>
+              <p>Interactive flashcards, contextual definitions, search, and click-to-reveal word meanings with bookmarks.</p>
+            </div>
+          </div>
+          <div class="category-footer">
+            <span>Master Words</span>
+            <span>Study Vocab →</span>
+          </div>
+        </a>
 
-.card button{
-background:#8B6B4A;
-color:white;
-border:none;
-padding:8px 15px;
-border-radius:8px;
-cursor:pointer;
-}
+        <a href="questions.html" class="category-card">
+          <div>
+            <div class="category-icon-wrapper">📝</div>
+            <div class="category-content" style="margin-top: 1rem;">
+              <h3>Important Questions Bank</h3>
+              <p>CBSE pattern 1-mark, 2-marks, 3-marks, 5-marks, and competency-based questions with model answers.</p>
+            </div>
+          </div>
+          <div class="category-footer">
+            <span>Exam Oriented</span>
+            <span>Practice Questions →</span>
+          </div>
+        </a>
 
-.card button:hover{
-background:#6D4C41;
-}
+        <a href="quick-revision.html" class="category-card">
+          <div>
+            <div class="category-icon-wrapper">⚡</div>
+            <div class="category-content" style="margin-top: 1rem;">
+              <h3>Quick Revision Cram Sheet</h3>
+              <p>Rapid exam-eve review checklists with 5-10 key points, central ideas, and critical exam takeaways.</p>
+            </div>
+          </div>
+          <div class="category-footer">
+            <span>Exam Eve</span>
+            <span>Quick Revise →</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
-</style>
-<section>
-<h2>Why Choose Us?</h2>
-<ul>
-<li>Affordable Packages</li>
-<li>Luxury Hotels</li>
-<li>Visa Assistance</li>
-<li>24/7 Customer Support</li>
-<li>Experienced Tour Guides</li>
-</ul>
-</section>
+    <!-- Featured Chapters -->
+    <section class="container" style="padding-bottom: 4rem;">
+      <div class="section-header-block">
+        <div class="section-header-left">
+          <h2 class="section-title">Featured High-Yield Lessons</h2>
+          <p class="section-subtitle">Jump straight into deeply analyzed chapters with line-by-line breakdowns.</p>
+        </div>
+        <a href="flamingo.html" class="btn btn-outline" style="font-size: 0.875rem;">View All →</a>
+      </div>
 
-<section>
-<h2>Contact Us</h2>
-<form>
-<input type="text" placeholder="Enter Name"><br><br>
-<input type="email" placeholder="Enter Email"><br><br>
-<textarea rows="5" placeholder="Enter Message"></textarea><br><br>
-<button>Book Now</button>
-</form>
-</section>
+      <div class="chapters-grid" id="featured-chapters-grid">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+    </section>
+  </main>
 
-<footer>
-<p>Global Explorer Travels</p>
-<p>Email : info@globalexplorer.com</p>
-<p>Phone : +91 9876543210</p>
-</footer>
+  <!-- Global Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="search-modal-card">
+      <div class="search-input-header">
+        <span>🔍</span>
+        <input type="text" id="global-search-input" class="search-modal-input" placeholder="Search chapter title, author, keyword, or difficult word..." autofocus>
+        <button id="close-search-modal" class="icon-btn" style="border:none;">✕</button>
+      </div>
+      <div class="search-results-container" id="global-search-results">
+        <!-- Results rendered by app.js -->
+      </div>
+    </div>
+  </div>
 
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-badge">12</div>
+            <span class="brand-title">CBSE Class 12 English Hub</span>
+          </div>
+          <p>Learn • Understand • Revise • Score</p>
+          <p class="disclaimer-text">
+            “An independent educational resource for learning and revision.”<br>
+            Note: This educational platform is an independent study guide and is not officially affiliated with CBSE or NCERT.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Flamingo</h4>
+          <div class="footer-links">
+            <a href="chapter.html?id=the-rattrap">The Rattrap</a>
+            <a href="chapter.html?id=indigo">Indigo</a>
+            <a href="chapter.html?id=poets-and-pancakes">Poets and Pancakes</a>
+            <a href="chapter.html?id=the-interview">The Interview</a>
+            <a href="chapter.html?id=going-places">Going Places</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Poetry & Vistas</h4>
+          <div class="footer-links">
+            <a href="chapter.html?id=my-mother-at-sixty-six">My Mother at Sixty-Six</a>
+            <a href="chapter.html?id=keeping-quiet">Keeping Quiet</a>
+            <a href="chapter.html?id=the-third-level">The Third Level</a>
+            <a href="chapter.html?id=the-tiger-king">The Tiger King</a>
+            <a href="chapter.html?id=the-enemy">The Enemy</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tools & Tracking</h4>
+          <div class="footer-links">
+            <a href="vocabulary.html">Vocabulary Builder</a>
+            <a href="questions.html">Questions Bank</a>
+            <a href="quick-revision.html">⚡ Quick Revision</a>
+            <a href="bookmarks.html">🔖 My Bookmarks</a>
+            <a href="progress.html">📊 My Progress</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 CBSE Class 12 English Hub. All rights reserved.</div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="index.html">Home</a>
+          <a href="bookmarks.html">Bookmarks</a>
+          <a href="progress.html">Progress</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/pdf-generator.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
