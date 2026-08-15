@@ -1,324 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>spotify – Music for Everyone</title>
-  <meta name="description" content="Stream Tamil music on Melodify – a premium music experience inspired by Spotify." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Circular+Std:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+<title>Global Explorer Travels</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f2f2f2;
+}
+header{
+background:#4b7aa8;
+color:white;
+text-align:center;
+padding:20px;
+}
+nav{
+background:#2c9717;
+padding:10px;
+text-align:center;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+section{
+background:white;
+width:50%;
+margin:20px auto;
+padding:20px;
+border-radius:8px;
+}
+img{
+border-radius:8px;
+}
 
+input,textarea{
+width:95%;
+padding:8px;
+margin:5px 0;
+}
+button{
+background:#0055aa;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+}
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+</head>
 <body>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-logo">
-      <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
-      </svg>
-      <span class="logo-text">Melodify</span>
-    </div>
+<header>
+<h1>Global Explorer Travels</h1>
+<p>Your Gateway To International Adventures</p>
+</header>
 
-    <nav class="sidebar-nav">
-      <ul class="nav-list">
-        <li class="nav-item active" id="nav-home">
-          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33A2 2 0 0 1 22 7.577V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z" />
-          </svg>
-          <span>Home</span>
-        </li>
-        <li class="nav-item" id="nav-search">
-          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M10.533 1.279c-5.18 0-9.407 4.927-9.407 9.808s4.226 9.808 9.407 9.808c2.234 0 4.29-.863 5.857-2.29l.08.08v2.85l5.532 5.532a1 1 0 0 0 1.414-1.414l-5.532-5.532h-2.85l-.08-.08a8.223 8.223 0 0 1-5.54 2.154 8.554 8.554 0 0 1-8.157-8.608 8.554 8.554 0 0 1 8.157-8.608 8.554 8.554 0 0 1 8.157 8.608 8.46 8.46 0 0 1-.938 3.898l1.437 1.437a10.35 10.35 0 0 0 1.751-5.335c0-4.881-4.226-9.808-9.407-9.808z" />
-          </svg>
-          <span>Search</span>
-        </li>
-        <li class="nav-item" id="nav-library">
-          <svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1.5.866l9-5.197a1 1 0 0 0 0-1.732l-9-5.803zM7 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z" />
-          </svg>
-          <span>Your Library</span>
-        </li>
-      </ul>
-    </nav>
+<nav>
+<a href="#">Home</a>
+<a href="#">Packages</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
 
-    <div class="sidebar-section">
-      <div class="section-header">
-        <span>PLAYLISTS</span>
-        <button class="add-btn" id="add-playlist-btn" title="Create playlist">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 3a1 1 0 0 1 1 1v7h7a1 1 0 1 1 0 2h-7v7a1 1 0 1 1-2 0v-7H4a1 1 0 1 1 0-2h7V4a1 1 0 0 1 1-1z" />
-          </svg>
-        </button>
-      </div>
-      <ul class="playlist-list" id="playlist-list">
-        <li class="playlist-item active-playlist" data-playlist="0">Tamil Hits 🎵</li>
-        <li class="playlist-item" data-playlist="1">Romantic Melodies 💕</li>
-        <li class="playlist-item" data-playlist="2">Chill Vibes 🌙</li>
-      </ul>
-    </div>
+<section>
+<img src="banner.jpg" width="100%" height="250">
+<h2>About Us</h2>
+<p>Global Explorer Travels provides affordable international tour packages with luxury hotels, visa assistance and experienced tour guides for unforgettable vacations.</p>
+</section>
 
-    <div class="sidebar-footer">
-      <div class="install-app">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5h10zm0 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H9a1 1 0 1 1 0-2h3V8a1 1 0 0 1 1-1z" />
-        </svg>
-        <span>Install App</span>
-      </div>
-    </div>
-  </aside>
+<section>
 
-  <!-- Main Content -->
-  <main class="main-content" id="main-content">
-    <!-- Top Bar -->
-    <header class="topbar">
-      <div class="topbar-nav">
-        <button class="nav-arrow" id="btn-back" title="Go back">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M15.957 2.793a1 1 0 0 1 0 1.414L8.164 12l7.793 7.793a1 1 0 1 1-1.414 1.414L5.336 12l9.207-9.207a1 1 0 0 1 1.414 0z" />
-          </svg>
-        </button>
-        <button class="nav-arrow" id="btn-forward" title="Go forward">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M8.043 2.793a1 1 0 0 0 0 1.414L15.836 12l-7.793 7.793a1 1 0 1 0 1.414 1.414L18.664 12 9.457 2.793a1 1 0 0 0-1.414 0z" />
-          </svg>
-        </button>
-      </div>
-      <div class="topbar-search">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M10.533 1.279c-5.18 0-9.407 4.927-9.407 9.808s4.226 9.808 9.407 9.808c2.234 0 4.29-.863 5.857-2.29l.08.08v2.85l5.532 5.532a1 1 0 0 0 1.414-1.414l-5.532-5.532h-2.85l-.08-.08a8.223 8.223 0 0 1-5.54 2.154 8.554 8.554 0 0 1-8.157-8.608 8.554 8.554 0 0 1 8.157-8.608 8.554 8.554 0 0 1 8.157 8.608 8.46 8.46 0 0 1-.938 3.898l1.437 1.437a10.35 10.35 0 0 0 1.751-5.335c0-4.881-4.226-9.808-9.407-9.808z" />
-        </svg>
-        <input type="text" id="search-input" placeholder="What do you want to play?" />
-      </div>
-      <div class="topbar-user">
-        <button class="upgrade-btn">Upgrade</button>
-        <div class="user-avatar" id="user-avatar">
-          <span>U</span>
-        </div>
-      </div>
-    </header>
+<h2>Popular Packages</h2>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero-section">
-      <div class="hero-gradient"></div>
-      <div class="hero-content">
-        <h1 class="hero-title">Good Morning 🌅</h1>
-        <p class="hero-subtitle">Your personalized Tamil music awaits</p>
-      </div>
-    </section>
+<div class="card">
+<img src="japan.jpg" width="180" height="120">
+<h3>Japan</h3>
+<p>🌸 Cherry Blossom Tour</p>
+<p>🕒 7 Days</p>
+<p><b>₹1,20,000</b></p>
+<button>Book Now</button>
+</div>
 
-    <!-- Featured Playlist -->
-    <section class="content-section" id="featured-section">
-      <div class="section-title-row">
-        <h2 class="section-heading">Featured Tamil Hits</h2>
-        <button class="show-all-btn">Show all</button>
-      </div>
-      <div class="cards-grid" id="songs-grid"></div>
-    </section>
+<div class="card">
+<img src="france.jpg" width="180" height="120">
+<h3>France</h3>
+<p>🗼 Paris & Eiffel Tour</p>
+<p>🕒 8 Days</p>
+<p><b>₹1,75,000</b></p>
+<button>Book Now</button>
+</div>
 
-    <!-- Recently Played -->
-    <section class="content-section">
-      <div class="section-title-row">
-        <h2 class="section-heading">Recently Played</h2>
-        <button class="show-all-btn">Show all</button>
-      </div>
-      <div class="cards-grid" id="recent-grid"></div>
-    </section>
+<div class="card">
 
-    <!-- Track List -->
-    <section class="content-section track-list-section">
-      <div class="section-title-row">
-        <h2 class="section-heading">Your Playlist</h2>
-      </div>
-      <div class="track-list-header">
-        <span class="th-num">#</span>
-        <span class="th-title">TITLE</span>
-        <span class="th-album">ALBUM</span>
-        <span class="th-date">DATE ADDED</span>
-        <span class="th-duration">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-            <path
-              d="M12 3a9 9 0 1 0 0 18A9 9 0 0 0 12 3zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12zm11-5a1 1 0 0 1 1 1v4.586l2.707 2.707a1 1 0 0 1-1.414 1.414l-3-3A1 1 0 0 1 11 13V8a1 1 0 0 1 1-1z" />
-          </svg>
-        </span>
-      </div>
-      <div id="track-list"></div>
-    </section>
-  </main>
+<h3>Dubai</h3>
+<p>🏜 Desert Safari Tour</p>
+<p>🕒 5 Days</p>
+<p><b>₹85,000</b></p>
+<button>Book Now</button>
+</div>
 
-  <!-- Right Panel -->
-  <aside class="right-panel" id="right-panel">
-    <div class="now-playing-panel">
-      <h3 class="panel-title">Now Playing</h3>
-      <div class="np-art-container">
-        <div class="np-art" id="np-art">
-          <div class="art-placeholder">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
-            </svg>
-          </div>
-        </div>
-        <div class="np-vinyl" id="np-vinyl"></div>
-      </div>
-      <div class="np-info">
-        <div class="np-song-name" id="np-song-name">Select a song</div>
-        <div class="np-artist" id="np-artist">–</div>
-      </div>
-      <div class="np-actions">
-        <button class="np-action-btn" id="np-like-btn" title="Like">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path
-              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-          </svg>
-        </button>
-        <button class="np-action-btn" title="Add to playlist">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 3a1 1 0 0 1 1 1v7h7a1 1 0 1 1 0 2h-7v7a1 1 0 1 1-2 0v-7H4a1 1 0 1 1 0-2h7V4a1 1 0 0 1 1-1z" />
-          </svg>
-        </button>
-        <button class="np-action-btn" title="Share">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M21 7a3 3 0 1 1-5.94-.583l-5.484-2.742a3 3 0 1 1 0-3.35l5.484-2.742a3 3 0 1 1 .894 1.789L10.47 2.91a3.001 3.001 0 0 1 0 2.18l5.484 2.742A3 3 0 0 1 21 7zm-3 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-15-5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm15-9a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-          </svg>
-        </button>
-      </div>
-      <div class="queue-section">
-        <h4 class="queue-title">Up Next</h4>
-        <div id="queue-list"></div>
-      </div>
-    </div>
-  </aside>
+</section>
 
-  <!-- Bottom Player Bar -->
-  <footer class="player-bar" id="player-bar">
-    <!-- Current Song Info -->
-    <div class="player-left">
-      <div class="player-thumb" id="player-thumb">
-        <div class="thumb-placeholder">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
-          </svg>
-        </div>
-      </div>
-      <div class="player-info">
-        <div class="player-song-name" id="player-song-name">–</div>
-        <div class="player-artist" id="player-artist">–</div>
-      </div>
-      <button class="heart-btn" id="heart-btn" title="Like">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path
-            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-        </svg>
-      </button>
-    </div>
+<style>
 
-    <!-- Controls -->
-    <div class="player-center">
-      <div class="player-controls">
-        <button class="ctrl-btn" id="shuffle-btn" title="Shuffle">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M16.851 5.026l3.122 3.12-3.122 3.12 1.414 1.414L22 9.453V8.439l-3.733-3.827-1.416 1.414zM2 7h11v2H2V7zm0 8h11v2H2v-2zm14.851.734l-1.416 1.414L22 21.56v-1.015l-3.735-3.827 3.122-3.12-3.122-3.12 1.414-1.414L22 12.546v1.015l-5.149 4.173z" />
-          </svg>
-        </button>
-        <button class="ctrl-btn" id="prev-btn" title="Previous">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M13 16.196V7.804a1 1 0 0 1 1.6-.8l6 4.196a1 1 0 0 1 0 1.6l-6 4.196a1 1 0 0 1-1.6-.8zm-11 0V7.804a1 1 0 0 1 1.6-.8l6 4.196a1 1 0 0 1 0 1.6L3.6 17.796A1 1 0 0 1 2 17z"
-              transform="scale(-1,1) translate(-24,0)" />
-          </svg>
-        </button>
-        <button class="play-pause-btn" id="play-pause-btn" title="Play/Pause">
-          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6 4l15 8-15 8V4z" />
-          </svg>
-          <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-            <rect x="6" y="4" width="4" height="16" />
-            <rect x="14" y="4" width="4" height="16" />
-          </svg>
-        </button>
-        <button class="ctrl-btn" id="next-btn" title="Next">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M11 7.804v8.392a1 1 0 0 0 1.6.8l6-4.196a1 1 0 0 0 0-1.6L12.6 7.004a1 1 0 0 0-1.6.8zM2 7.804v8.392a1 1 0 0 0 1.6.8l6-4.196a1 1 0 0 0 0-1.6L3.6 7.004A1 1 0 0 0 2 7.804z" />
-          </svg>
-        </button>
-        <button class="ctrl-btn" id="repeat-btn" title="Repeat">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17 1l4 4-4 4V6H8c-1.103 0-2 .897-2 2v3H4V8c0-2.206 1.794-4 4-4h9V1zM7 23l-4-4 4-4v3h9c1.103 0 2-.897 2-2v-3h2v3c0 2.206-1.794 4-4 4H7v3z" />
-          </svg>
-        </button>
-      </div>
-      <div class="progress-container">
-        <span class="time-current" id="time-current">0:00</span>
-        <div class="progress-bar" id="progress-bar">
-          <div class="progress-track">
-            <div class="progress-fill" id="progress-fill"></div>
-            <div class="progress-thumb" id="progress-thumb"></div>
-          </div>
-        </div>
-        <span class="time-total" id="time-total">0:00</span>
-      </div>
-    </div>
+.card{
+display:inline-block;
+width:200px;
+background:white;
+margin:12px;
+padding:12px;
+text-align:center;
+border:1px solid #d2c2b0;
+border-radius:15px;
+vertical-align:top;
+}
 
-    <!-- Volume & Extra Controls -->
-    <div class="player-right">
-      <button class="ctrl-btn-sm" title="Queue">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
-        </svg>
-      </button>
-      <button class="ctrl-btn-sm" title="Devices">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M4 6h18v2H4zm0 5h18v2H4zm0 5h18v2H4z" />
-        </svg>
-      </button>
-      <button class="ctrl-btn-sm" id="mute-btn" title="Mute">
-        <svg class="icon-vol" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M11 4.702a.905.905 0 0 0-1.5-.68L5.867 7.373H3.198A.5.5 0 0 0 2.7 7.87v8.257c0 .276.224.499.5.499h2.668l3.633 3.35a.905.905 0 0 0 1.5-.68V4.702zm5.616 1.06a1 1 0 0 1 1.414.032 9.497 9.497 0 0 1 0 12.411 1 1 0 0 1-1.446-1.381 7.497 7.497 0 0 0 0-9.648 1 1 0 0 1 .032-1.414zm-2.295 2.14a1 1 0 0 1 1.414.03 6.498 6.498 0 0 1 0 8.135 1 1 0 0 1-1.445-1.381 4.498 4.498 0 0 0 0-5.37 1 1 0 0 1 .031-1.414z" />
-        </svg>
-        <svg class="icon-mute" viewBox="0 0 24 24" fill="currentColor" style="display:none">
-          <path
-            d="M11 4.702a.905.905 0 0 0-1.5-.68L5.867 7.373H3.198A.5.5 0 0 0 2.7 7.87v8.257c0 .276.224.499.5.499h2.668l3.633 3.35a.905.905 0 0 0 1.5-.68V4.702zm9.217 4.634-1.414-1.415-2.147 2.148-2.147-2.148-1.414 1.415 2.147 2.147-2.147 2.147 1.414 1.415 2.147-2.148 2.147 2.148 1.414-1.415-2.147-2.147 2.147-2.147z" />
-        </svg>
-      </button>
-      <div class="volume-container">
-        <div class="volume-bar" id="volume-bar">
-          <div class="volume-track">
-            <div class="volume-fill" id="volume-fill" style="width:70%"></div>
-            <div class="volume-thumb" id="volume-thumb" style="left:70%"></div>
-          </div>
-        </div>
-      </div>
-      <button class="ctrl-btn-sm" title="Full screen">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M16 3h5v5h-2V5h-3V3zM3 8V3h5v2H5v3H3zm13 13v-2h3v-3h2v5h-5zm-13-5h2v3h3v2H3v-5z" />
-        </svg>
-      </button>
-    </div>
-  </footer>
+.card img{
+border-radius:10px;
+}
 
-  <!-- Hidden Audio Element -->
-  <audio id="audio-player" preload="metadata"></audio>
+.card h3{
+margin:10px 0 5px;
+color:#7B5E57;
+}
 
-  <script src="app.js"></script>
+.card p{
+margin:5px;
+}
+
+.card button{
+background:#8B6B4A;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#6D4C41;
+}
+
+</style>
+<section>
+<h2>Why Choose Us?</h2>
+<ul>
+<li>Affordable Packages</li>
+<li>Luxury Hotels</li>
+<li>Visa Assistance</li>
+<li>24/7 Customer Support</li>
+<li>Experienced Tour Guides</li>
+</ul>
+</section>
+
+<section>
+<h2>Contact Us</h2>
+<form>
+<input type="text" placeholder="Enter Name"><br><br>
+<input type="email" placeholder="Enter Email"><br><br>
+<textarea rows="5" placeholder="Enter Message"></textarea><br><br>
+<button>Book Now</button>
+</form>
+</section>
+
+<footer>
+<p>Global Explorer Travels</p>
+<p>Email : info@globalexplorer.com</p>
+<p>Phone : +91 9876543210</p>
+</footer>
+
 </body>
-
 </html>
